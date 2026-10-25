@@ -5,7 +5,7 @@ function isExternalUrl(value: string) {
 }
 
 export function GET(request: Request) {
-  const { personal, projects, social } = portfolioConfig
+  const { personal, career, social, writing } = portfolioConfig
   const siteUrl = new URL(request.url).origin
 
   const optionalLinks = [
@@ -25,10 +25,13 @@ ${personal.name} is a ${personal.role.toLowerCase()} based in ${personal.locatio
 
 - [Homepage](${siteUrl}/): Personal portfolio with services, experience, and contact information
 
-## Selected Work
+## Professional Experience
 
-- [${projects.spendAlarm.title}](${projects.spendAlarm.url}): ${projects.spendAlarm.positioning}
-- [${projects.intellident.title}](${projects.intellident.url}): ${projects.intellident.positioning}
+${career.map((job) => `- ${job.company} (${job.period}): ${job.description}`).join("\n")}
+
+## Writing
+
+${writing.map((article) => `- [${article.title}](${article.url}) (${article.year}, ${article.platform})`).join("\n")}
 
 ## Contact
 

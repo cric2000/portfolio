@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anmol Lamba — Portfolio
 
-## Getting Started
+A minimal, responsive portfolio built with Next.js, React, and Tailwind CSS. A compact engineering profile with a personal introduction, expandable company rows, visible results, and a small toolkit. Monochrome typography and a restrained green accent keep the focus on the content.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the local URL printed by Next.js.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Validate
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npx tsc --noEmit
+npm run build
+```
 
-## Learn More
+If Turbopack is restricted by the execution environment, use `npm run build -- --webpack` for the production build.
 
-To learn more about Next.js, take a look at the following resources:
+## Content and design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Update personal details, social links, career entries, and toolkit in `src/config/portfolio.ts`.
+- Homepage sections are in `src/components/sections/`.
+- The sticky header keeps the email action and theme control visible in `src/components/layout/navbar.tsx`.
+- Colors, layout, responsive rules, and reduced-motion support are in `src/app/globals.css`.
+- `/llms.txt` derives its public career summary from the same portfolio config.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The design uses locally hosted Manrope with system monospace captions. The font and its OFL license are in `src/app/fonts/`; no font requests are made to a third party at runtime. Company rows use native disclosure elements and remain keyboard accessible. Results stay visible while notes are collapsed. Dark mode follows the visitor’s system preference on a first visit and can be changed in the header.
 
-## Deploy on Vercel
+Visual research: [P.CV](https://p.cv/) for its compact structure and [Bobby Giangeruso](https://www.bobby.so/) for its personal introduction and chronological work history. The implementation and layout are original to this portfolio.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Icons and sharing previews
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/icon.svg` and `favicon.ico` provide the AL browser icon.
+- `src/app/apple-icon.png` and `public/icons/` provide matching mobile icons.
+- `src/app/opengraph-image.png` and `twitter-image.png` are matching 1200×630 cards rendered with the local Manrope font. Their accompanying `.alt.txt` files supply accessible descriptions.
+- Next.js discovers the icons and sharing images through its file conventions. The web manifest is served from `public/site.webmanifest`.
+
+Regenerate the committed assets with `python3 scripts/generate_brand_assets.py` (requires Pillow). Website builds use the generated files directly.
+
+For a custom deployment domain, set `NEXT_PUBLIC_SITE_URL` to the public origin, including `https://`, so sharing-image URLs use that domain. Without it, Vercel deployment URLs are detected automatically, with localhost used for local development.

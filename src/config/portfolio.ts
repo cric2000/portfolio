@@ -7,85 +7,90 @@ export const portfolioConfig = {
 
   },
   social: {
-    linkedin: "LINKEDIN_URL",
-    github: "GITHUB_URL",
+    linkedin: "https://www.linkedin.com/in/anmollamba/",
+    github: "https://github.com/cric2000",
   },
+  writing: [
+    {
+      title: "Finding the minSdkVersion in Flutter Projects",
+      url: "https://medium.com/@anmollamba30/finding-the-minsdkversion-in-flutter-projects-68349f4cfd44",
+      date: "2024-02-17",
+      year: "2024",
+      platform: "Medium",
+      readingTime: "3 min read",
+    },
+  ],
   metrics: [
-    { value: "1M+", label: "Downloads on products I've contributed to" },
+    { value: "1M+", label: "App downloads on a product I helped build" },
     { value: "5K+", label: "Daily active users supported" },
-    { value: "10×", label: "Performance improvement delivered" },
+    { value: "10×", label: "Faster SQL query processing" },
     { value: "3+ Years", label: "Building production software" },
   ],
-  projects: {
-    spendAlarm: {
-      id: "spend-alarm",
-      title: "Spend Alarm",
-      tag: "B2B SaaS · Full-Stack",
-      positioning: "Advertising monitoring that catches expensive problems before they become expensive mistakes.",
-      description: "Spend Alarm is an intelligent advertising monitoring platform designed to continuously monitor business-critical advertising metrics and surface meaningful anomalies before they create larger problems.",
-      url: "https://spendalarm.com",
-      image: "/hero.png",
-      dimensions: [
-        {
-          name: "Frontend",
-          description: "Data-heavy SaaS interfaces, dashboard experiences, responsive product UI, complex application states and user-facing monitoring workflows."
-        },
-        {
-          name: "Backend",
-          description: "Monitoring engine, scheduled jobs, advertising data processing, business-rule evaluation and anomaly detection logic."
-        },
-        {
-          name: "Full Product",
-          description: "End-to-end product workflows connecting advertising data, monitoring systems, anomaly detection, alerts and the product interface."
-        }
+  career: [
+    {
+      company: "Bestosys",
+      years: "2026",
+      result: "Healthcare & AI",
+      role: "Full Stack Software Developer",
+      period: "Mar – Sep 2026",
+      location: "Pune, India",
+      headline: "Making healthcare more connected.",
+      description: "Built the workflows behind better patient communication, from WhatsApp conversations to AI-powered appointment booking.",
+      highlights: [
+        "WhatsApp Business integrations for patient messaging, chatbots, interactive forms, and opt-in management.",
+        "AI voicebot workflows for appointments, patient registration, and clinic queries.",
+        "NABIDH integrations, HL7 events, SQL backfills, and more reliable scheduled jobs.",
       ],
-      capabilities: [
-        "Automated advertising monitoring",
-        "Spend anomaly detection",
-        "Zero-conversion detection",
-        "Spend-halted detection",
-        "Conversion monitoring",
-        "Efficiency monitoring",
-        "Scheduled background monitoring",
-        "Actionable alerts",
-        "Analytics dashboard"
-      ]
+      tools: ["Backend APIs", "SQL", "WhatsApp Business", "AI voicebots", "HL7"],
+      detailLabel: "THE FOCUS",
+      detailValue: "Connected care.",
+      detailNote: "Less friction between patients, clinics, and the systems they rely on.",
     },
-    intellident: {
-      id: "intellident",
-      title: "IntelliDent",
-      tag: "Mobile · AI · Backend",
-      positioning: "AI-powered dental screening built from mobile interface to backend inference.",
-      description: "IntelliDent is an end-to-end mobile product that analyzes dental images using AI-powered computer vision and generates informational reports highlighting potential dental concerns.",
-      url: "https://play.google.com/store/apps/details?id=com.rohan_pareek.IntelliDent",
-      images: ["/mobile-1.webp", "/mobile-2.webp"],
-      dimensions: [
-        {
-          name: "Mobile",
-          description: "Cross-platform React Native development, complex mobile interfaces, image workflows, API integrations and production application behavior."
-        },
-        {
-          name: "Backend",
-          description: "FastAPI services, image processing pipelines, structured APIs and backend deployment."
-        },
-        {
-          name: "AI Integration",
-          description: "Computer-vision inference integrated into a complete user-facing product experience."
-        }
+    {
+      company: "ScaleX",
+      years: "2023–26",
+      result: "1M+ app downloads",
+      role: "Software Developer",
+      period: "Nov 2023 – Feb 2026",
+      location: "Remote",
+      headline: "From the first API to a million downloads.",
+      description: "Built across web, mobile, and backend systems for consumer astrology products and an AI education platform.",
+      highlights: [
+        "Developed a full-stack platform supporting 5K+ daily active users with Next.js, Go, and Node.js.",
+        "Built and maintained a Flutter app with 1M+ downloads, including payments, in-app purchases, and deep linking.",
+        "Developed a multi-tenant RAG education platform and automated Google Ads operations to reduce manual work by 5×.",
       ],
-      capabilities: [
-        "Image capture and upload",
-        "AI/computer-vision integration",
-        "FastAPI backend",
-        "Multiple inference pipelines",
-        "Report generation",
-        "PDF generation and sharing",
-        "Scan history",
-        "Multilingual support across 8 languages",
-        "Production deployment"
-      ]
-    }
-  },
+      tools: ["Next.js", "Go", "Node.js", "Flutter", "RAG"],
+      detailLabel: "PRODUCT REACH",
+      detailValue: "1M+",
+      detailNote: "Downloads on a mobile app I helped build and maintain.",
+    },
+    {
+      company: "GreyB",
+      years: "2023",
+      result: "10× faster queries",
+      role: "Software Developer",
+      period: "Jan – Oct 2023",
+      location: "Mohali, India",
+      headline: "Better answers. Faster queries.",
+      description: "Developed a patent buyer identification platform, connecting patent search and filtering with buyer analysis workflows.",
+      highlights: [
+        "Built backend APIs for patent search, filtering, and buyer identification.",
+        "Optimized dynamic SQL query generation to improve query processing speed by 10×.",
+        "Implemented automated tests with Mocha to support reliable delivery.",
+      ],
+      tools: ["Backend APIs", "SQL", "Mocha", "Automated testing"],
+      detailLabel: "PERFORMANCE GAIN",
+      detailValue: "10×",
+      detailNote: "Faster query processing through SQL optimization.",
+    },
+  ],
+  toolkit: [
+    { title: "Web & mobile", tools: ["React", "Next.js", "TypeScript", "Flutter", "React Native"] },
+    { title: "Backend & data", tools: ["Go", "Python", "Node.js", "FastAPI", "PostgreSQL"] },
+    { title: "APIs & cloud", tools: ["REST APIs", "AWS", "Docker", "CI/CD"] },
+    { title: "AI integration", tools: ["RAG"] },
+  ],
   services: [
     {
       id: "frontend",
