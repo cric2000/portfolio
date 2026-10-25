@@ -5,7 +5,7 @@ function isExternalUrl(value: string) {
 }
 
 export function GET(request: Request) {
-  const { personal, career, social, writing } = portfolioConfig
+  const { personal, career, social, writing, buildBuddy } = portfolioConfig
   const siteUrl = new URL(request.url).origin
 
   const optionalLinks = [
@@ -28,6 +28,10 @@ ${personal.name} is a ${personal.role.toLowerCase()} based in ${personal.locatio
 ## Professional Experience
 
 ${career.map((job) => `- ${job.company} (${job.period}): ${job.description}`).join("\n")}
+
+## Side Project
+
+- [BuildBuddy](${buildBuddy.url}): Animated SVG companions that react to build status, with an interactive mood playground on the portfolio
 
 ## Writing
 

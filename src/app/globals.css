@@ -203,6 +203,25 @@ button, summary { cursor: pointer; }
 .experience-detail li::marker { color: var(--ink); font-size: 11px; }
 .experience-detail > .experience-tools { margin-top: 15px; color: var(--ink); font-family: var(--mono); font-size: 11px; line-height: 1.8; }
 .contribution-note { color: var(--muted-foreground); font-size: 12px; line-height: 1.6; margin-top: 10px; }
+.buddy-section { display: grid; grid-template-columns: minmax(0, 1fr) 224px; align-items: center; gap: 30px; border-bottom: 1px solid var(--border); padding-block: 29px 26px; }
+.buddy-eyebrow { font-family: var(--mono); color: var(--muted-foreground); font-size: 11px; line-height: 1.8; margin-bottom: 10px; }
+.buddy-copy h2 { font-size: 21px; font-weight: 500; line-height: 1.35; letter-spacing: -.5px; }
+.buddy-intro { margin-top: 11px; font-size: 15px; line-height: 1.8; color: var(--muted-foreground); max-width: 450px; }
+.buddy-controls { display: flex; gap: 7px; margin-top: 19px; }
+.buddy-controls button { min-height: 42px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 5px; font-size: 12px; line-height: 1.4; transition: color .2s, background .2s, border-color .2s; }
+.buddy-controls button:hover { border-color: var(--ink); color: var(--ink); }
+.buddy-controls button[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--background); }
+.buddy-source { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: var(--ink); margin-top: 17px; }
+.buddy-source:hover { text-decoration: underline; }
+.buddy-preview { display: flex; flex-direction: column; align-items: center; gap: 9px; margin: 0; }
+.buddy-art { width: 224px; height: 224px; }
+.buddy-art img { width: 100%; height: 100%; }
+.buddy-art-dark { display: none; }
+.dark .buddy-art-light { display: none; }
+.dark .buddy-art-dark { display: block; }
+.buddy-preview figcaption { font-family: var(--mono); color: var(--muted-foreground); font-size: 11px; line-height: 1.6; }
+.buddy-next { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; line-height: 1.8; color: var(--ink); padding: 3px 0; }
+.buddy-next:hover { text-decoration: underline; }
 .toolkit-section { margin-top: 25px; }
 .compact-toolkit { display: grid; gap: 10px; }
 .compact-toolkit > div { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 15px; }
@@ -267,6 +286,11 @@ button, summary { cursor: pointer; }
   .experience-detail ul { font-size: 13px; }
   .experience-detail > .experience-tools { font-size: 10px; }
   .section-label > span { font-size: 9px; }
+  .buddy-section { grid-template-columns: minmax(0, 1fr); gap: 21px; padding-block: 25px; }
+  .buddy-copy h2 { font-size: 21px; }
+  .buddy-intro { font-size: 14px; }
+  .buddy-controls button { flex: 1; min-height: 44px; padding: 8px; }
+  .buddy-preview { gap: 8px; }
   .compact-toolkit > div { grid-template-columns: 104px minmax(0, 1fr); gap: 13px; }
   .compact-toolkit dd { font-size: 13px; }
   .compact-toolkit dt { font-size: 12px; }

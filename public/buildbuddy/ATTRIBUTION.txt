@@ -1,0 +1,8 @@
+BuildBuddy mascot artwork
+Source: https://github.com/cric2000/build-buddy
+Generated using https://build-buddy-kappa.vercel.app/v1/mascot.svg
+
+Code and original character artwork are licensed under MIT; see LICENSE.txt.
+Kurama and Tony Tony Chopper are unofficial fan-art depictions of characters
+from Naruto and One Piece. The underlying characters and designs belong to
+their respective owners.

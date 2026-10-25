@@ -10,6 +10,9 @@ export const portfolioConfig = {
     linkedin: "https://www.linkedin.com/in/anmollamba/",
     github: "https://github.com/cric2000",
   },
+  buildBuddy: {
+    url: "https://github.com/cric2000/build-buddy",
+  },
   writing: [
     {
       title: "Finding the minSdkVersion in Flutter Projects",
