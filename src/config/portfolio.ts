@@ -13,6 +13,9 @@ export const portfolioConfig = {
   buildBuddy: {
     url: "https://github.com/cric2000/build-buddy",
   },
+  clipRag: {
+    url: "https://github.com/cric2000/clip-rag",
+  },
   writing: [
     {
       title: "Finding the minSdkVersion in Flutter Projects",

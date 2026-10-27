@@ -5,7 +5,7 @@ function isExternalUrl(value: string) {
 }
 
 export function GET(request: Request) {
-  const { personal, career, social, writing, buildBuddy } = portfolioConfig
+  const { personal, career, social, writing, buildBuddy, clipRag } = portfolioConfig
   const siteUrl = new URL(request.url).origin
 
   const optionalLinks = [
@@ -29,9 +29,10 @@ ${personal.name} is a ${personal.role.toLowerCase()} based in ${personal.locatio
 
 ${career.map((job) => `- ${job.company} (${job.period}): ${job.description}`).join("\n")}
 
-## Side Project
+## Built for Fun
 
-- [BuildBuddy](${buildBuddy.url}): Animated SVG companions that react to build status, with an interactive mood playground on the portfolio
+- [BuildBuddy](${buildBuddy.url}): A spare-time experiment built just for fun, with expressive SVG companions and a playful mood playground
+- [ClipRAG](${clipRag.url}): A spare-time Linux clipboard manager for searching, pinning, and reusing commands, snippets, links, and text locally
 
 ## Writing
 

@@ -21,11 +21,11 @@ export function BuildBuddy() {
   const assetPath = `/buildbuddy/${character.toLowerCase()}-${mood.status}`
 
   return (
-    <section id="build-buddy" className="buddy-section" aria-labelledby="buddy-heading">
+    <article id="build-buddy" className="buddy-section" aria-labelledby="buddy-heading">
       <div className="buddy-copy">
-        <p className="buddy-eyebrow">A little thing I built · BuildBuddy</p>
-        <h2 id="buddy-heading">Even my builds have feelings.</h2>
-        <p className="buddy-intro">I built BuildBuddy to give passing tests, broken builds, and everything in between a little personality. Try changing its mood.</p>
+        <p className="buddy-eyebrow">BuildBuddy</p>
+        <h3 id="buddy-heading">Even my builds have feelings.</h3>
+        <p className="buddy-intro">I made BuildBuddy in my spare time, just for fun. Little companions with big feelings about your builds. Pick a mood and have a play.</p>
         <div className="buddy-controls" role="group" aria-label="Try a build status">
           {moods.map((item, index) => (
             <button
@@ -39,7 +39,7 @@ export function BuildBuddy() {
           ))}
         </div>
         <a className="buddy-source" href={portfolioConfig.buildBuddy.url} target="_blank" rel="noopener noreferrer">
-          View on GitHub <ArrowUpRight size={14} aria-hidden="true" />
+          Take a closer look <ArrowUpRight size={14} aria-hidden="true" />
         </a>
       </div>
       <figure className="buddy-preview">
@@ -51,6 +51,7 @@ export function BuildBuddy() {
               src={`${assetPath}-${theme}.svg`}
               width={224}
               height={224}
+              loading="eager"
               alt={`${character} looks ${mood.feeling} during ${mood.description}.`}
               unoptimized
             />
@@ -61,6 +62,6 @@ export function BuildBuddy() {
           Meet another buddy <RotateCw size={12} aria-hidden="true" />
         </button>
       </figure>
-    </section>
+    </article>
   )
 }
