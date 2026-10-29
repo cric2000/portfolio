@@ -3,10 +3,10 @@ import { portfolioConfig } from "@/config/portfolio"
 export function SelectedWork() {
   return (
     <section id="work" className="profile-section" aria-labelledby="experience-heading">
-      <div className="section-label"><h2 id="experience-heading">Experience</h2><span>SELECT A ROW TO EXPLORE</span></div>
+      <div className="section-label" data-reveal><h2 id="experience-heading">Experience</h2><span>SELECT A ROW TO EXPLORE</span></div>
       <div className="experience-list">
         {portfolioConfig.career.map((job) => (
-          <details className="experience-row" key={job.company}>
+          <details className="experience-row" key={job.company} data-reveal>
             <summary>
               <span className="experience-years">{job.years}</span>
               <span className="experience-company"><strong>{job.company}</strong><span>{job.role}</span></span>
@@ -22,7 +22,7 @@ export function SelectedWork() {
           </details>
         ))}
       </div>
-      <p className="contribution-note">The results above reflect products and systems I helped build with a team.</p>
+      <p className="contribution-note" data-reveal>The results above reflect products and systems I helped build with a team.</p>
     </section>
   )
 }

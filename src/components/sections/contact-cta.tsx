@@ -21,7 +21,7 @@ export function ContactCTA() {
   }
 
   return (
-    <section id="contact" className="compact-contact" aria-labelledby="contact-heading">
+    <section id="contact" className="compact-contact" aria-labelledby="contact-heading" data-reveal>
       <div>
         <h2 id="contact-heading">Have something in mind?</h2>
         <a className="email-address" href={`mailto:${portfolioConfig.personal.email}`}>{portfolioConfig.personal.email} <ArrowUpRight size={13} /></a>

@@ -16,6 +16,10 @@ export const portfolioConfig = {
   clipRag: {
     url: "https://github.com/cric2000/clip-rag",
   },
+  dupNest: {
+    url: "https://github.com/cric2000/dup-nest",
+    packageUrl: "https://www.npmjs.com/package/dupnest",
+  },
   writing: [
     {
       title: "Finding the minSdkVersion in Flutter Projects",

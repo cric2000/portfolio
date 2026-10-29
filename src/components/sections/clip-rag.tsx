@@ -3,7 +3,7 @@ import { portfolioConfig } from "@/config/portfolio"
 
 export function ClipRag() {
   return (
-    <article id="clip-rag" className="buddy-section cliprag-entry" aria-labelledby="cliprag-heading">
+    <article id="clip-rag" className="buddy-section fun-text-entry" aria-labelledby="cliprag-heading" data-reveal>
       <div className="buddy-copy">
         <p className="buddy-eyebrow">ClipRAG</p>
         <h3 id="cliprag-heading">Where did I copy that?</h3>

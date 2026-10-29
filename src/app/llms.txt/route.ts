@@ -5,7 +5,7 @@ function isExternalUrl(value: string) {
 }
 
 export function GET(request: Request) {
-  const { personal, career, social, writing, buildBuddy, clipRag } = portfolioConfig
+  const { personal, career, social, writing, buildBuddy, clipRag, dupNest } = portfolioConfig
   const siteUrl = new URL(request.url).origin
 
   const optionalLinks = [
@@ -33,6 +33,7 @@ ${career.map((job) => `- ${job.company} (${job.period}): ${job.description}`).jo
 
 - [BuildBuddy](${buildBuddy.url}): A spare-time experiment built just for fun, with expressive SVG companions and a playful mood playground
 - [ClipRAG](${clipRag.url}): A spare-time Linux clipboard manager for searching, pinning, and reusing commands, snippets, links, and text locally
+- [DupNest](${dupNest.url}): A spare-time Linux CLI for finding duplicate files, organizing folders, and cleaning supported developer caches; published as a [public beta on npm](${dupNest.packageUrl})
 
 ## Writing
 

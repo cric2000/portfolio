@@ -2,7 +2,7 @@ import { portfolioConfig } from "@/config/portfolio"
 
 export function Hero() {
   return (
-    <section id="top" className="profile-intro" aria-labelledby="profile-title">
+    <section id="top" className="profile-intro" aria-labelledby="profile-title" data-reveal>
       <div className="name-line">
         <h1 id="profile-title">Full-Stack Software Engineer</h1>
       </div>

@@ -3,7 +3,7 @@ import { portfolioConfig } from "@/config/portfolio"
 
 export function Writing() {
   return (
-    <section id="writing" className="writing-section" aria-labelledby="writing-heading">
+    <section id="writing" className="writing-section" aria-labelledby="writing-heading" data-reveal>
       <h2 id="writing-heading">A brief writing detour</h2>
       <p>I tried sharing a little of what I’d learned, in case it saved another developer some time.</p>
       {portfolioConfig.writing.map((article) => (

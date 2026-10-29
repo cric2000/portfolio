@@ -21,7 +21,7 @@ export function BuildBuddy() {
   const assetPath = `/buildbuddy/${character.toLowerCase()}-${mood.status}`
 
   return (
-    <article id="build-buddy" className="buddy-section" aria-labelledby="buddy-heading">
+    <article id="build-buddy" className="buddy-section" aria-labelledby="buddy-heading" data-reveal>
       <div className="buddy-copy">
         <p className="buddy-eyebrow">BuildBuddy</p>
         <h3 id="buddy-heading">Even my builds have feelings.</h3>
