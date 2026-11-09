@@ -185,8 +185,20 @@ button, summary { cursor: pointer; }
 .personal-intro > p + p { margin-top: 9px; color: var(--muted-foreground); }
 .profile-section { margin-top: 31px; }
 .section-label { display: flex; justify-content: space-between; align-items: baseline; gap: 15px; margin-bottom: 13px; }
-.section-label h2 { font-size: 15px; font-weight: 500; line-height: 1.5; }
+.section-label h2, .writing-section > h2, .compact-contact h2, .personal-note summary h2 { font-size: 18px; font-weight: 550; line-height: 1.4; letter-spacing: -.2px; }
 .section-label > span { font-family: var(--mono); font-size: 10px; color: var(--muted-foreground); letter-spacing: .35px; }
+.experience-disclosure > summary { min-height: 48px; margin-bottom: 0; padding-block: 6px; list-style: none; align-items: center; flex-wrap: wrap; gap: 8px 16px; }
+.experience-disclosure > summary::-webkit-details-marker { display: none; }
+.experience-disclosure:not([open]) > summary { border-bottom: 1px solid var(--border); padding-bottom: 14px; }
+.experience-disclosure[open] > summary { margin-bottom: 13px; }
+.experience-toggle-hint { display: inline-flex; align-items: center; gap: 10px; }
+.experience-toggle-hint > span { font-size: 17px; line-height: 1; transition: transform .2s; }
+.experience-disclosure[open] > summary .experience-toggle-hint > span { transform: rotate(45deg); }
+.experience-disclosure > summary:hover h2, .experience-disclosure > summary:hover .experience-toggle-hint { color: var(--ink); }
+.experience-disclosure[open] .experience-row { animation: section-reveal 500ms cubic-bezier(.22, 1, .36, 1) both; }
+.experience-disclosure[open] .experience-row:nth-child(2) { animation-delay: 75ms; }
+.experience-disclosure[open] .experience-row:nth-child(3) { animation-delay: 150ms; }
+.experience-disclosure .experience-row:focus-within { animation: none; }
 .experience-list { border-top: 1px solid var(--border); }
 .experience-row { border-bottom: 1px solid var(--border); }
 .experience-row > summary { display: grid; grid-template-columns: 84px minmax(0, 1fr) 180px 20px; align-items: center; column-gap: 14px; min-height: 82px; list-style: none; padding: 12px 5px 12px 0; transition: background .2s; }
@@ -238,7 +250,6 @@ button, summary { cursor: pointer; }
 .compact-toolkit dt { color: var(--muted-foreground); font-size: 13px; line-height: 1.7; }
 .compact-toolkit dd { font-size: 14px; line-height: 1.7; }
 .writing-section { border-top: 1px solid var(--border); margin-top: 25px; padding-top: 22px; }
-.writing-section > h2 { font-size: 15px; line-height: 1.5; font-weight: 500; }
 .writing-section > p { margin-top: 9px; font-size: 15px; line-height: 1.8; color: var(--muted-foreground); }
 .writing-entry { display: grid; grid-template-columns: 50px minmax(0, 1fr) 16px; gap: 14px; align-items: start; padding-top: 19px; }
 .writing-entry > time { font-family: var(--mono); font-size: 12px; line-height: 2; color: var(--muted-foreground); }
@@ -249,14 +260,14 @@ button, summary { cursor: pointer; }
 .writing-entry > svg { color: var(--ink); margin-top: 4px; }
 .about-section { border-top: 1px solid var(--border); margin-top: 25px; padding-block: 19px; }
 .personal-note { margin: 0; }
-.personal-note summary { display: flex; gap: 8px; align-items: center; color: var(--muted-foreground); font-size: 13px; list-style: none; width: fit-content; }
+.personal-note summary { display: flex; gap: 12px; align-items: center; color: var(--foreground); list-style: none; width: fit-content; }
 .personal-note summary::-webkit-details-marker { display: none; }
 .personal-note summary:hover, .personal-note[open] summary { color: var(--ink); }
-.personal-note summary > span { transition: transform .2s; }
+.personal-note summary > span { font-family: var(--mono); font-size: 18px; color: var(--muted-foreground); transition: transform .2s; }
 .personal-note[open] summary > span { transform: rotate(45deg); }
 .personal-note > p { max-width: 620px; margin-top: 12px; font-size: 15px; line-height: 1.8; color: var(--muted-foreground); }
 .compact-contact { display: flex; align-items: flex-end; justify-content: space-between; gap: 25px; border-top: 1px solid var(--border); padding-block: 21px 24px; }
-.compact-contact h2 { font-size: 15px; line-height: 1.5; font-weight: 500; margin-bottom: 7px; }
+.compact-contact h2 { margin-bottom: 7px; }
 .email-address { display: inline-flex; gap: 4px; align-items: center; color: var(--ink); font-size: 14px; }
 .email-address:hover { text-decoration: underline; }
 .copy-email { margin-left: 9px; font-family: var(--mono); color: var(--muted-foreground); font-size: 12px; }
@@ -299,6 +310,7 @@ button, summary { cursor: pointer; }
   .experience-detail ul { font-size: 13px; }
   .experience-detail > .experience-tools { font-size: 10px; }
   .section-label > span { font-size: 9px; }
+  .section-label h2, .writing-section > h2, .compact-contact h2, .personal-note summary h2 { font-size: 17px; }
   .buddy-section { grid-template-columns: minmax(0, 1fr); gap: 21px; padding-block: 25px; }
   .buddy-copy h3 { font-size: 21px; }
   .buddy-intro { font-size: 14px; }
@@ -326,6 +338,7 @@ button, summary { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   [data-reveal] { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .experience-disclosure .experience-row { animation: none !important; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 @media print {

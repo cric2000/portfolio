@@ -19,13 +19,13 @@ export default function Home() {
         <ScrollReveals />
         <main id="main-content">
           <Hero />
-          <SelectedWork />
           <section id="just-for-fun" className="profile-section fun-section" aria-labelledby="fun-heading">
             <div className="section-label" data-reveal><h2 id="fun-heading">Just for fun</h2></div>
             <BuildBuddy />
             <ClipRag />
             <DupNest />
           </section>
+          <SelectedWork />
           <Services />
           <Writing />
           <About />
